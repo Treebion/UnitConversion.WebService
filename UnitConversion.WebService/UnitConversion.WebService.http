@@ -1,0 +1,6 @@
+@UnitConversion.WebService_HostAddress = http://localhost:5132
+
+GET {{UnitConversion.WebService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
