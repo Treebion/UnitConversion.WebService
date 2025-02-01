@@ -21,7 +21,7 @@ public class DataController : ControllerBase
     }
 
     /// <summary>
-    /// Converts a value from one area unit to another.
+    /// Converts a value from one data unit to another.
     /// </summary>
     /// <param name="command">The conversion request containing FromUnit, ToUnit, and Value.</param>
     /// <returns>The converted value and relevant details.</returns>

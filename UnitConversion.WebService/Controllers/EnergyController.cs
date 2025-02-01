@@ -15,13 +15,17 @@ public class EnergyController : ControllerBase
 {
     private readonly IMediator _mediator;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="EnergyController"/> class.
+    /// </summary>
+    /// <param name="mediator">The mediator instance.</param>
     public EnergyController(IMediator mediator)
     {
         _mediator = mediator;
     }
 
     /// <summary>
-    /// Converts a value from one area unit to another.
+    /// Converts a value from one energy unit to another.
     /// </summary>
     /// <param name="command">The conversion request containing FromUnit, ToUnit, and Value.</param>
     /// <returns>The converted value and relevant details.</returns>
@@ -41,7 +45,7 @@ public class EnergyController : ControllerBase
     }
 
     /// <summary>
-    /// Retrieves all available data units.
+    /// Retrieves all available energy units.
     /// </summary>
     [HttpGet("units")]
     public async Task<IActionResult> GetAvailableUnits()

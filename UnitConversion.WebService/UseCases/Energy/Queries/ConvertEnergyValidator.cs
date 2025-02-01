@@ -3,8 +3,14 @@ using UnitConversion.ConversionUnits;
 
 namespace UnitConversion.WebService.UseCases.Energy.Queries;
 
+/// <summary>
+/// Validator for <see cref="ConvertEnergyQuery"/>.
+/// </summary>
 public class ConvertEnergyValidator : AbstractValidator<ConvertEnergyQuery>
 {
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ConvertEnergyValidator"/> class.
+    /// </summary>
     public ConvertEnergyValidator()
     {
         RuleFor(x => x.FromUnit)

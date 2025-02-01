@@ -3,8 +3,14 @@ using UnitConversion.ConversionUnits;
 
 namespace UnitConversion.WebService.UseCases.Data.Queries;
 
+/// <summary>
+/// Validator for <see cref="ConvertDataQuery"/>.
+/// </summary>
 public class ConvertDataValidator : AbstractValidator<ConvertDataQuery>
 {
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ConvertDataValidator"/> class.
+    /// </summary>
     public ConvertDataValidator()
     {
         RuleFor(x => x.FromUnit)

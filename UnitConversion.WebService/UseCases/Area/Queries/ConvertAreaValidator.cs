@@ -3,8 +3,14 @@ using UnitConversion.ConversionUnits;
 
 namespace UnitConversion.WebService.UseCases.Area.Queries;
 
+/// <summary>
+/// Validator for <see cref="ConvertAreaQuery"/>.
+/// </summary>
 public class ConvertAreaValidator : AbstractValidator<ConvertAreaQuery>
 {
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ConvertAreaValidator"/> class.
+    /// </summary>
     public ConvertAreaValidator()
     {
         RuleFor(x => x.FromUnit)

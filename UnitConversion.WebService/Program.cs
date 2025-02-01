@@ -11,8 +11,15 @@ using UnitConversion.WebService.Middleware;
 
 namespace UnitConversion.WebService;
 
+/// <summary>
+/// The main program class for the Unit Conversion Web Service.
+/// </summary>
 public class Program
 {
+    /// <summary>
+    /// The main entry point for the application.
+    /// </summary>
+    /// <param name="args">The command-line arguments.</param>
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +31,10 @@ public class Program
         app.Run();
     }
 
+    /// <summary>
+    /// Configures the services for the application.
+    /// </summary>
+    /// <param name="services">The service collection to configure.</param>
     private static void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers()
@@ -82,6 +93,10 @@ public class Program
         });
     }
 
+    /// <summary>
+    /// Configures the middleware for the application.
+    /// </summary>
+    /// <param name="app">The web application to configure.</param>
     private static void ConfigureMiddleware(WebApplication app)
     {
         if (app.Environment.IsDevelopment())
