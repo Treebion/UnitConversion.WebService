@@ -3,9 +3,9 @@ using UnitConversion.ConversionUnits;
 
 namespace UnitConversion.WebService.UseCases.Data.Queries;
 
-public class ConvertAreaValidator : AbstractValidator<ConvertDataQuery>
+public class ConvertDataValidator : AbstractValidator<ConvertDataQuery>
 {
-    public ConvertAreaValidator()
+    public ConvertDataValidator()
     {
         RuleFor(x => x.FromUnit)
             .Must(value => Enum.IsDefined(typeof(DataUnit), value))
